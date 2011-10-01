@@ -1,1 +1,21 @@
-This file was created by IntelliJ IDEA 10.5.2 for binding GitHub repository
+Work that I've done towards finding an algorithm to find the optimal solution
+for the following problem:
+
+There exist 2 groups of people of size N; one is a group of pupils, and the
+other is a group of mentors. Each mentor has a list of length X (I'll solve the
+arbitrary length case later) that defines their preferred list of pupils. Each
+pupil has a list of length X that defines their list of preferred mentors. A
+solution is defined as a set of assignments such that each pupil is assigned to
+a different mentor. The score of the solution is the sum of the scores for each
+person, such that the score of person 'p' is defined as following:
+
+score(p, o): X - rank(p, o)
+
+such that
+
+rank(p, o): The rank of person 'o' in the list of person 'p',
+
+such that
+
+The rank of the most preferred person is 0, then 1, then 2, and so forth. If
+person 'o' does not appear in the list, then the score is 0.
